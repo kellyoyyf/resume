@@ -103,6 +103,8 @@
 	{Real life work on building data stream with Kafka.　 Experienced in implementing ETL pipeline with Scalding, Spark, Oozie, Sqoop. Familiar with big data storage like Hive/Impala, HDFS.}
 	\resumeSubItem{API Implementation}
 	{Design and implement API using Scala in Play Framework and Typed.js in Node.js. Relational database design in MySQL, Vertica and PostgreSQL.}
+	\resumeSubItem{Agile Working}
+	{Comfortablly working in agile team. Deeply involved in agile coding process including pair-coding, code review, writing unit, functional and integration test, etc.}
 	\resumeSubHeadingListEnd
 
 	%-----------EXPERIENCE-----------------
@@ -113,55 +115,59 @@
 	{Tapad Inc.}{New York, NY}
 	{Software Engineer}{July 2016 - Present}
 	\resumeItemListStart
-	\resumeItem{Tensorflow}
-	{TensorFlow is an open source software library for numerical computation using data flow graphs; primarily used for training deep learning models.}
-	\resumeItem{Apache Beam}
-	{Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines, as well as a set of language-specific SDKs for constructing pipelines and runners.}
+	\resumeItem{Demand Side Platform}
+	{
+	
+	Worked in a 3 engineers team taking full responsibility of real-time bidding system. The system is faced with million level QPS and P99 latency is under 10ms.
+		 	
+	Involved deeply with several SSP integrations and well knowledged on OpenRTB protocol. Taking lead in team for upgrading OpenRTB 2.4. Major contributor to Native creative integration from scratch, the work included database design, request parsing and serving matched creatives, integration test and API implementation in Play for internal preview).
+	 
+	Added debugger tool in bidding system for both engineer and account manager use for trouble shooting. Featured MVEL to support multiple filter expressions like platform, user-agent, etc. }
+
+	\resumeItem{Audience ETL Platform}{
+		
+	Worked in a 4 engineers team building an automated target audience ETL platform from ground. 
+	
+	Participated in pipeline and Postgre database design. Building API with Typed.js on Node.js and construct client library in Scala. 
+	
+	Integrate audience upload with two major partners and customize upload client with status logging, error control and flow control feature. 
+	
+	Featured docker compose to implement an sbt integration test mechanism.
+	}
+	
+	\resumeItem{Cross Screen Audience Experiment}{
+		
+	Taking full charge of whole ETL pipe-line design and implementation. Data extraction from HDFS, transforming data from different source to targed cross screen audience and load data to thirdparty through customized client. Working with PM and client on data analysis and validation with Scalding. }
+
+	\resumeItem{IP Look Up Service}{
+	Moved out off-heap memory based IP look up service from bidding system to independent Mesos service, saved resources in virtual machine.
+	Built service and client wrapper based on Finagle, and used Zookeeper for service discovery.
+	Implemented client IP lazy evaluation and cache to minimize service queries and improve performance.
+	}
+	\resumeItem{Tracked Event Streaming}{
+	Implemented an event streaming pipeline for improve campaign performance in third party platform.	
+	Enriched API for mapping thirdparty tracking event to internal events.
+	Featured Kafka for real time tracked event streaming to thirdparty platform.
+	Use Zookeeper for notifying consumer refresing for events update.	
+	}
+	\resumeItem{Analytics Report Generator}{
+	Participate in building pipeline to schedule daily data summary to ease the workload in database using Apache Oozie and Sqoop.	
+	Dockerized existing report generation service.
+	Implemented report generator's coordination mechanism using Zookeeper for report loss recovery.
+	}
 	\resumeItemListEnd
 	
 	\resumeSubheading
 	{EEme, LLC}{Pittsburgh, PA}
 	{Software Engineer, Part-time Intern}{Mar. 2016}
 	\resumeItemListStart
-	\resumeItem{Notifications}
-	{Service for sending email, push and in-app notifications. Involved in features such as delivery time optimization, tracking, queuing and A/B testing. Built an internal app to run batch campaigns for marketing etc.}
-	\resumeItemListEnd
-	
-	\resumeSubheading
-	{Lucena Research}{Atlanta, GA}
-	{Data Scientist}{Summer 2012 and 2013}
-	\resumeItemListStart
-	\resumeItem{Portfolio Management}
-	{Created models for portfolio hedging,  portfolio optimization and price forecasting. Also creating a strategy backtesting engine used for simulating and backtesting strategies.}
-	\resumeItem{QuantDesk}
-	{Python backend for a web application used by hedge fund managers for portfolio management.}
-	\resumeItemListEnd
-	
-	\resumeSubheading
-	{Georgia Institute of Technology}{Atlanta, GA}
-	{Research and Teaching Assistant}{Jan 2012 - Dec 2013}
-	\resumeItemListStart
-	\resumeItem{Research Assistant - Machine Learning}
-	{Research on machine learning for portfolio hedging and replication algorithms. Modeling low-risk \& continuous-return strategies. Developed the python library QSTK.}
-	\resumeItem{Teaching Assistant - Computational Investing}
-	{The online course on Coursera, had more than 100,000 students enrolled. It was featured on the 11 Alive News and the Atlanta Journal Constitution. Involved in creating assignment, exams and conducting recitation sessions. Also taught the on-campus version of the course.}
-	\resumeItemListEnd
-	
-	\resumeSubHeadingListEnd
-	
-	
-	%-----------PROJECTS-----------------
-	\section{Projects}
-	\resumeSubHeadingListStart
-	\resumeSubItem{QuantSoftware Toolkit}
-	{Open source python library for financial data analysis and machine learning for finance.}
-	\resumeSubItem{Github Visualization}
-	{Data Visualization of Git Log data using D3 to analyze project trends over time.}
-	\resumeSubItem{Recommendation System}
-	{Music and Movie recommender systems using collaborative filtering on public datasets.}
-	\resumeSubItem{Mac Setup}
-	{Book that gives step by step instructions on setting up developer environment on Mac OS.}
-	\resumeSubHeadingListEnd
+	\resumeItem{Analytics Frontend}{ 
 		
+	Building file drag-drop upload feature using Ruby on Rails deployed on Heroku. 
+	
+	Implemented async request-response cycle from file reading, validating and parsing, getting report from backend analytic engine, to serve formatted report to client}
+	\resumeItemListEnd
+	
+	\resumeSubHeadingListEnd
 	%-------------------------------------------
 \end{document}
