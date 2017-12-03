@@ -99,16 +99,16 @@
 	\resumeSubHeadingListStart
 	\resumeSubItem{Programming Language}
 	{ Mainly use Scala and Java, hands on coding in Bash, project experience in Go and C.}
-	\resumeSubItem{Real-time Bidding System}
-	{Experienced in DSP build, tuning, maintenance and trouble-shooting. Familiar with Open RTB protocol and integration workflow. Knowledged about ID-Sync, audience targeting.}
+	\resumeSubItem{RTB Lifecycle}
+	{Experienced in DSP building and maintenance. Familiar with Open RTB protocol and integration workflow. Knowledged about ID-Sync, audience targeting, etc.}
 	\resumeSubItem{Microservice Building}
-	{Working in building microservice with Finagle, Zookeeper, Docker, Mesos, Nginx}
+	{Experienced in building microservice with Finagle, Zookeeper, Docker, Mesos, Nginx}
 	\resumeSubItem{Big Data ETL}
-	{Real life work on building data stream with Kafka.　 Experienced in implementing ETL pipeline with Scalding, Spark, Oozie, Sqoop. Familiar with big data storage like Hive/Impala, HDFS.}
+	{Real life work on data stream with Kafka.　Experienced in ETL pipeline build with Scalding, Spark, Oozie, Sqoop. Familiar with big data storage like Hive/Impala, HDFS.}
 	\resumeSubItem{API Implementation}
-	{Design and implement API using Scala in Play Framework and Typed.js in Node.js. Relational database design in MySQL, Vertica and PostgreSQL.}
+	{Worked with both Play and Node.js. Relational database experience in MySQL and Postgre.}
 	\resumeSubItem{Agile Working}
-	{Comfortablly working in agile team. Deeply involved in agile coding process including pair-coding, code review, writing unit, functional and integration test, etc.}
+	{Agile team player including pair-coding, code review, test and validation 　in full lifecycle, etc.}
 	\resumeSubHeadingListEnd
 
 	%-----------EXPERIENCE-----------------
@@ -120,61 +120,60 @@
 	{Software Engineer}{July 2016 - Present}
 	\resumeItemListStart
 	\resumeItem{Demand Side Platform}
-		
-		\begin{description}[font=$\diamond$\scshape\bfseries]
-					\item Worked in a 3 engineers team taking full responsibility of real-time bidding system. The system is faced with million level QPS and P99 latency is under 10ms.
-					
-					\item Involved deeply with several SSP integrations and well knowledged on OpenRTB protocol. Taking lead in team for upgrading OpenRTB 2.4. Major contributor to Native creative integration from scratch, the work included database design, request parsing and serving matched creatives, integration test and API implementation in Play for internal preview).
-					
-					\item Added debugger tool in bidding system for both engineer and account manager use for trouble shooting. Featured MVEL to support multiple filter expressions like platform, user-agent, etc
+
+		\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
+					\item Worked in a 3 people team building real-time bidding system with million level QPS and under 10 ms P99 latency.
+					\item Major contributor in Open RTB integration and built Native ads serving from scratch with DB design, request/serving mechanism and internal preview API.
+					\item Created debugger tool featuring MVEL to support multiple filter expressions like platform, user-agent, etc
 		\end{description}
 		
-
-		
- 	
-
 	\resumeItem{Audience ETL Platform}{
-		
-	Worked in a 4 engineers team building an automated target audience ETL platform from ground. 
-	
-	Participated in pipeline and Postgre database design. Building API with Typed.js on Node.js and construct client library in Scala. 
-	
-	Integrate audience upload with two major partners and customize upload client with status logging, error control and flow control feature. 
-	
-	Featured docker compose to implement an sbt integration test mechanism.
+				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
+					\item Worked in a 4 engineers team building an automated target audience ETL platform from ground. 
+					\item Participate in pipeline and DB design. Paired with frontend engineer on API implementation with Typed.js.
+					\item Integrate with 2 major partners and customize upload client with status logging, error and flow control feature. 
+					\item Featured docker compose to implement sbt integration test mechanism in one command.
+				\end{description}
+	}
+	\resumeItem{Tracked Event Streaming}{
+				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
+					\item Implemented a tracked event streaming pipeline across platform with Kafka.	
+					\item Enrich internal API with thirdparty events mapping. Used Zookeeper for notifying consumer events pick up.
+				\end{description}
+	}
+	\resumeItem{Analytics Report Generator}{
+				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
+					\item Built pipeline for hourly thirdparty data import and summarization  with Hadoop, Oozie and Sqoop.
+					\item Implemented report generator's coordination mechanism using Zookeeper for report loss recovery.
+					\item Dockerized existing report generation service and configured it for integration test.
+				\end{description}
+	}
+	\resumeItem{IP Look Up Service}{
+				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
+					\item Used Mesos and Finagle to move off-heap memory based IP lookup service out of bidding system.
+					\item Implemented client lazy evaluation and cache to minimize service queries and improve performance.
+				\end{description}
 	}
 	
 	\resumeItem{Cross Screen Audience Experiment}{
-		
-	Taking full charge of whole ETL pipe-line design and implementation. Data extraction from HDFS, transforming data from different source to targed cross screen audience and load data to thirdparty through customized client. Working with PM and client on data analysis and validation with Scalding. }
+				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
+					\item Took full charge of whole ETL pipe-line design and implementation. 
+					\item Extracted data from AWS S3 and HDFS, transformed data and generated a graph based cross screen target audience with Scalding. Implemented data upload mechanism to thirdparty platform. 
+					\item Worked with PM and client on data analysis and validation with scalding.
+				\end{description}
+	}
 
-	\resumeItem{IP Look Up Service}{
-	Moved out off-heap memory based IP look up service from bidding system to independent Mesos service, saved resources in virtual machine.
-	Built service and client wrapper based on Finagle, and used Zookeeper for service discovery.
-	Implemented client IP lazy evaluation and cache to minimize service queries and improve performance.
-	}
-	\resumeItem{Tracked Event Streaming}{
-	Implemented an event streaming pipeline for improve campaign performance in third party platform.	
-	Enriched API for mapping thirdparty tracking event to internal events.
-	Featured Kafka for real time tracked event streaming to thirdparty platform.
-	Use Zookeeper for notifying consumer refresing for events update.	
-	}
-	\resumeItem{Analytics Report Generator}{
-	Participate in building pipeline to schedule daily data summary to ease the workload in database using Apache Oozie and Sqoop.	
-	Dockerized existing report generation service.
-	Implemented report generator's coordination mechanism using Zookeeper for report loss recovery.
-	}
 	\resumeItemListEnd
 	
 	\resumeSubheading
 	{EEme, LLC}{Pittsburgh, PA}
 	{Software Engineer, Part-time Intern}{Mar. 2016}
 	\resumeItemListStart
-	\resumeItem{Analytics Frontend}{ 
-		
-	Building file drag-drop upload feature using Ruby on Rails deployed on Heroku. 
 	
-	Implemented async request-response cycle from file reading, validating and parsing, getting report from backend analytic engine, to serve formatted report to client}
+	\resumeItem{Analytics Frontend}{
+		\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
+			\item Built an asynchronous file drag-drop upload feature with Ruby on Rails and deployed on Heroku. The feature included drag-drop, file validation, request to analytics engine and display analytic response in UI.
+		\end{description}}
 	\resumeItemListEnd
 	
 	\resumeSubHeadingListEnd
