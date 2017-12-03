@@ -44,7 +44,7 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
 	\item\small{
-		\textbf{#1}{: #2 \vspace{-2pt}}
+		\textbf{#1 \hspace{-2pt}}{: #2 \vspace{-2pt}}
 	}
 }
 
@@ -56,14 +56,18 @@
 	\end{tabular*}\vspace{-5pt}
 }
 
+
+
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 	\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
 	\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\itemDescription}[1]{\begin{itemize}[label=\diamond]}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,7 +98,7 @@
 	\section{Skills}
 	\resumeSubHeadingListStart
 	\resumeSubItem{Programming Language}
-	{Mainly use Scala and Java, hands on coding in Bash, project experience in Go and C.}
+	{ Mainly use Scala and Java, hands on coding in Bash, project experience in Go and C.}
 	\resumeSubItem{Real-time Bidding System}
 	{Experienced in DSP build, tuning, maintenance and trouble-shooting. Familiar with Open RTB protocol and integration workflow. Knowledged about ID-Sync, audience targeting.}
 	\resumeSubItem{Microservice Building}
@@ -116,13 +120,18 @@
 	{Software Engineer}{July 2016 - Present}
 	\resumeItemListStart
 	\resumeItem{Demand Side Platform}
-	{
-	
-	Worked in a 3 engineers team taking full responsibility of real-time bidding system. The system is faced with million level QPS and P99 latency is under 10ms.
-		 	
-	Involved deeply with several SSP integrations and well knowledged on OpenRTB protocol. Taking lead in team for upgrading OpenRTB 2.4. Major contributor to Native creative integration from scratch, the work included database design, request parsing and serving matched creatives, integration test and API implementation in Play for internal preview).
-	 
-	Added debugger tool in bidding system for both engineer and account manager use for trouble shooting. Featured MVEL to support multiple filter expressions like platform, user-agent, etc. }
+		
+		\begin{description}[font=$\diamond$\scshape\bfseries]
+					\item Worked in a 3 engineers team taking full responsibility of real-time bidding system. The system is faced with million level QPS and P99 latency is under 10ms.
+					
+					\item Involved deeply with several SSP integrations and well knowledged on OpenRTB protocol. Taking lead in team for upgrading OpenRTB 2.4. Major contributor to Native creative integration from scratch, the work included database design, request parsing and serving matched creatives, integration test and API implementation in Play for internal preview).
+					
+					\item Added debugger tool in bidding system for both engineer and account manager use for trouble shooting. Featured MVEL to support multiple filter expressions like platform, user-agent, etc
+		\end{description}
+		
+
+		
+ 	
 
 	\resumeItem{Audience ETL Platform}{
 		
