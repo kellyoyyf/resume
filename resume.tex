@@ -123,44 +123,43 @@
 	\resumeItem{Demand Side Platform}
 
 		\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-					\item Worked in a 3 people team building real-time bidding system with million level QPS and under 10 ms P99 latency.
+					\item Worked in a 3 people team owning real-time bidding system with million level QPS and under 10 ms P99 latency.
 					\item Major contributor in Open RTB integration. Built Native ads serving process from scratch, the work included DB design, built request/serving mechanism and internal preview API.
-					\item Created debugger tool featuring MVEL to support multiple filter expressions like platform, user-agent, etc
+					\item Created embedded bidder debugger featuring MVEL supporting multiple filter expressions for traffic monitoring.
 		\end{description}
 		
 	\resumeItem{Audience ETL Platform}{
 				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-					\item Worked in a 4 engineers team building an automated target audience ETL platform from ground. 
-					\item Participated in pipeline and DB design. Paired with frontend engineer on API implementation with Typed.js.
+					\item Built and extended features of an automated target audience ETL platform from scratch. 
+					\item Contributed in ETL and API design. Paired with frontend engineer on API implementation with Typed.js.
 					\item Integrated with 2 major partners and customize upload client with status logging, error and flow control feature. 
-					\item Featured docker compose to implement sbt integration test mechanism in one command.
+					\item Implemented sbt integration test in one command for API and wrapper client featuring docker compose.
 				\end{description}
 	}
 	\resumeItem{Tracked Event Streaming}{
 				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-					\item Implemented a tracked event streaming pipeline across platform with Kafka.	
-					\item Enriched internal API with thirdparty events mapping. Used Zookeeper for notifying consumer events pick up.
+					\item Implemented a tracked event streaming pipeline from internal to external platforms with Kafka.
+					\item Built the notification mechanism from API to consumer for consumer in-memory map refreshing with Zookeeper. 
 				\end{description}
 	}
 	\resumeItem{Analytics Report Generator}{
 				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-					\item Built pipeline for hourly thirdparty data import and summarization  with Hadoop, Oozie and Sqoop.
-					\item Implemented report generator's coordination mechanism using Zookeeper for report loss recovery.
-					\item Dockerized existing report generation service and configured it for integration test.
+					\item Built pipeline for hourly thirdparty data import and summarization with Hadoop, Oozie and Sqoop.
+					\item Dockerized VM-based report worker and API. Configured them in Mesos with service discovery through Nginx. 
+					\item Implemented worker coordination mechanism using Zookeeper in case of Mesos instance failure and report loss.
 				\end{description}
 	}
 	\resumeItem{IP Look Up Service}{
 				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-					\item Used Mesos and Finagle to move off-heap memory based IP lookup service out of bidding system.
-					\item Implemented client lazy evaluation and cache to minimize service queries and improve performance.
+					\item Used Mesos, Finagle and Zookeeper to dockerize off-heap memory based service out of bidding system.
+					\item Implemented client side lazy evaluation and cache to minimize service QPS and latency to improve performance.
 				\end{description}
 	}
 	
 	\resumeItem{Cross Screen Audience Experiment}{
 				\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-					\item Took full charge of whole ETL pipe-line design and implementation. 
+					\item Took full charge of whole ETL pipe-line design, implementation and performance validation. 
 					\item Extracted data from AWS S3 and HDFS, transformed data and generated a graph based cross screen target audience with Scalding. Implemented data upload mechanism to thirdparty platform. 
-					\item Worked with PM and client on data analysis and validation with scalding.
 				\end{description}
 	}
 
