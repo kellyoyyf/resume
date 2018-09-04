@@ -99,15 +99,15 @@
 	\section{Skills}
 	\resumeSubHeadingListStart
 	\resumeSubItem{Programming Language}
-	{Working with Scala and Java, hands on coding in Bash, project experience in Go and C.}
+	{Experienced in Scala and Java, hands on coding in Bash, project experience in Go and C.}
 	\resumeSubItem{Microservice Building}
-	{Experienced in building microservice with Finagle, Zookeeper, Docker, Mesos, Nginx}
+	{Experienced in building microservice with Spring Cloud, K8S, Thrift and Finagle.}
 	\resumeSubItem{Big Data ETL}
-	{Real life work on data stream with Kafka.　 Experienced in ETL pipeline build with Scalding, Spark, Oozie, Sqoop. Familiar with big data storage like Hive/Impala, HDFS.}
+	{Real life work on data stream with Kafka.　 Experienced in ETL pipeline build with Hadoop, Scalding, Spark, Oozie, Sqoop. Familiar with big data storage like Hive/Impala, HDFS.}
 	\resumeSubItem{API Implementation}
-	{Worked with both Play and Node.js. Relational database experience in MySQL and Postgre.}
+	{Worked with both Play and Spring. Database experience in MySQL, Postgre and MongoDB.}
 	\resumeSubItem{Agile Working}
-	{Agile team experience including pair-coding, code review, test and validation 　in full lifecycle, etc.}
+	{Agile experience including pair-coding, code review, test and validation in full lifecycle, etc.}
 	\resumeSubHeadingListEnd
 
 	%-----------EXPERIENCE-----------------
@@ -119,9 +119,12 @@
 	{Software Engineer}{Feb. 2018 - Present}
 	\resumeItemListStart
 		
-	\resumeItem{Census Analytics}{
+	\resumeItem{Census Lock Service}{
 		\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-			\item Working in Census analytics team building both front end and backend system for user data streaming, ETL, presentation and analysis.
+			\item Designed and implemented a distributed locking service with basic non-reentrant reader/writer lock and mutex feature based on Kubernetes and Spring Cloud.
+			\item Used MongoDB as underlying storage with its acknowledge wrihtes, unique index and self clean feature, designed document format and implemented DAO with Mongo Morphia. 
+			\item Refactored exsiting data pipeline job from old mutex-based locking mechanism to new lock service.
+			\item Designed logging mechanism with existing internal Elasticsearch/Logstash/Kibana and metric meter for service with Dropwizard Metrics. 
 		\end{description}}
 	\resumeItemListEnd
 	
@@ -166,17 +169,8 @@
 
 	\resumeItemListEnd
 	
-	\resumeSubheading
-	{EEme, LLC}{Pittsburgh, PA}
-	{Software Engineer, Part-time Intern}{Mar. 2016}
-	\resumeItemListStart
 	
-	\resumeItem{Analytics Frontend}{
-		\begin{description}[font=$\diamond$\scshape\bfseries,leftmargin=11pt,labelindent=0pt]
-			\item Built an asynchronous file drag-drop upload feature with Ruby on Rails and deployed on Heroku. The feature included drag-drop, file validation, request to analytics engine and display analytic response in UI.
-		\end{description}}
-	\resumeItemListEnd
-	
+		
 	\resumeSubHeadingListEnd
 	%-------------------------------------------
 \end{document}
